@@ -5,7 +5,7 @@ Sample applications demonstrating use of [pybvc](https://github.com/jebpublic/py
 * [Introduction Video](http://brcdcomm.github.io/BVC/jekyll/update/devops/netdev/appdev/2015/03/01/restconf-app-2.html)
 
 ## Pre-requisites:
-* Install [pybvc](https://github.com/jebpublic/pybvc)
+* Install [pybvc](https://github.com/BRCDcomm/pybvc)
 
 ## BVC Version Support:
 * 1.1.1 folder has been tested with BVC 1.1.1
