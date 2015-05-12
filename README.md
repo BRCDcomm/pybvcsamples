@@ -1,5 +1,5 @@
 # pybvcsamples
-Sample applications demonstrating use of [pybvc](https://github.com/jebpublic/pybvc) (a python support library for Brocade Vyatta Controller) to monitor/configure network via Brocade Vyatta Controller (BVC).
+Sample applications demonstrating use of [pybvc](https://github.com/BRCDcomm/pybvc) (a python support library for Brocade Vyatta Controller) to monitor/configure network via Brocade Vyatta Controller (BVC).
 
 ## Documentation:
 * [Introduction Video](http://brcdcomm.github.io/BVC/jekyll/update/devops/netdev/appdev/2015/03/01/restconf-app-2.html)
