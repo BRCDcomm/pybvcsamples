@@ -9,7 +9,7 @@ Sample applications demonstrating use of [pybvc](https://github.com/BRCDcomm/pyb
 
 ## Installation
 ```bash
-git clone https://github.com/BRCDcomm/pybvc.git
+git clone https://github.com/BRCDcomm/pybvcsamples.git
 ```
 
 ## BVC Version Support:
