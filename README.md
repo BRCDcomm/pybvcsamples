@@ -15,3 +15,4 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
 ## BVC Version Support:
 * 1.1.1 folder has been tested with BVC 1.1.1
 * 1.2.0 folder has been tested with BVC 1.2.0
+* 1.3.0 folder is being tested with BVC 1.3.0 and pybvc 1.1.1
