@@ -43,7 +43,7 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
     * _demo21_: Add/remove flow to openflow:1 node that Match: Ethernet Type 0x86dd, IPv6 Source 1234:5678:9ABC:DEF0:FDCD:A987:6543:210F/76, IPv6 Destination 2000:2abc:edff:fe00::3456/94, IPv6 Flow Label 7, IP DSCP 60, IP ECN 3, TCP Source 1831, TCP Destination 100610, Metadata: 123456789 Action: Output (controller)
     * _demo23_: Add/remove flow to openflow:1 node that Match: Ethernet Type 0x8847, MPLS Label 0x1b In port 13 Action: Set Field (MPLS Label 44, Output (Physical Port Number 14)
     * _demo24_: Add/remove flow to openflow:1 node that Match: Ethernet Type 0x8847, MPLS Label 0x2c In port 14 Action: Pop MPLS (Ethernet Type 34887, Output (Physical Port Number 13)
-* 1.3.0/sample_netconf/demos
+* 1.3.0/samplenetconf/demos
     * _ctrl_demo1_: List of YANG models supported by the Controller.
     * _ctrl_demo2_: Retrieve specific YANG model definition from the Controller.
     * _ctrl_demo3_: List of service provider applications on the controller.
@@ -69,7 +69,7 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
     * _vr_demo12_: adds and removes a VPN configuration for Site-to-Site VPN Configuration - X.509 Certificate Authentication
     * _vr_demo13_: adds and removes a vtun0 OpenVPN tunnel for Site-to-Site Mode with Preshared Secret
     * _vr_demo14_: adds and removes a vtun0 OpenVPN tunnel for Site-to-Site Mode with TLS
-* 1.3.0/sample_netconf/commands
+* 1.3.0/samplenetconf/cmds
     * _mount_: Mount the vRouter onto Controller.
     * _show_cfg_: Show config of vRouter.
     * _show_ctrl_yangmodel_: Return a specified YANG model.
