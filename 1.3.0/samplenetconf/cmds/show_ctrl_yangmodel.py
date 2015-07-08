@@ -30,7 +30,7 @@ if __name__ == "__main__":
         exit(0)
     
     model_identifier = None
-    model_version = None    
+    model_version = None
 
     if(len(sys.argv) == 1):
         print("   Error: missing arguments")
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     if(status.eq(STATUS.OK) == True):
         print "YANG model definition:"
         schema = result.get_data()
-        print schema
+        print schema.encode('utf-8', 'replace')
     else:
         print ("\n")
         print ("!!!Failed, reason: %s" % status.brief().lower())

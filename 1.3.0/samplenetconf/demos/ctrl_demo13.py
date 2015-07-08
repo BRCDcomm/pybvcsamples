@@ -30,58 +30,87 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
 import time
-import json
+
 
 from pybvc.controller.controller import Controller
 from pybvc.common.status import STATUS
-from pybvc.common.utils import load_dict_from_file
+from pybvc.controller.inventory import NetconfCapableNode
 
 
 if __name__ == "__main__":
+    ctrlIpAddr = '172.22.18.186'
+    ctrlPortNum = '8181'
+    ctrlUname = 'admin'
+    ctrlPswd = 'admin'
     
-    f = "cfg1.yml"
-    d = {}
-    if(load_dict_from_file(f, d) == False):
-        print("Config file '%s' read error: " % f)
-        exit()
-    
-    try:
-        ctrlIpAddr = d['ctrlIpAddr']
-        ctrlPortNum = d['ctrlPortNum']
-        ctrlUname = d['ctrlUname']
-        ctrlPswd = d['ctrlPswd']
-    except:
-        print ("Failed to get Controller device attributes")
-        exit(0)
-    
+    netconf_ids = []
+    netconf_nodes = []
     
     print ("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
     print ("<<< Demo Start")
     print ("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
     
-    rundelay = 5
     
-    print ("\n")
-    print ("<<< Creating Controller instance")
-    time.sleep(rundelay)
-    ctrl = Controller(ctrlIpAddr, ctrlPortNum, ctrlUname, ctrlPswd)
-    print ("'Controller':")
-    print ctrl.to_json()
+    rundelay = 2
     
     
     print "\n"
-    print ("<<< Show all configuration modules on the Controller")
+    ctrl = Controller(ctrlIpAddr, ctrlPortNum, ctrlUname, ctrlPswd)
+    print ("<<< Controller '%s:%s'" % (ctrlIpAddr, ctrlPortNum))
     time.sleep(rundelay)
-    result = ctrl.get_config_modules()
+    
+    
+    print "\n"
+    print ("<<< Get NETCONF Inventory Information")
+    time.sleep(rundelay)
+    
+    
+    result = ctrl.get_netconf_nodes_in_config()
     status = result.get_status()
     if(status.eq(STATUS.OK)):
-        print "Modules:"
-        slist = result.get_data()
-        print json.dumps(slist, default=lambda o: o.__dict__, sort_keys=True, indent=4)
+        netconf_ids = result.get_data()
     else:
         print ("\n")
-        print ("!!!Demo terminated, reason: %s" % status.brief())
+        print ("!!!Demo terminated, "
+               "failed to get list of NETCONF devices, "
+               "reason: %s" % status.brief())
         exit(0)
+        
+    print "\n"
+    print ("<<< NETCONF devices")
+    print "\n".strip()
+    for node_id in netconf_ids:
+        print "         %s" % node_id
+    
+    
+    for node_id in netconf_ids:
+        result = ctrl.build_netconf_node_inventory_object(node_id)
+        status = result.get_status()
+        if(status.eq(STATUS.OK)):
+            node = result.get_data()
+            assert(isinstance(node, NetconfCapableNode))
+            netconf_nodes.append(node)
+        else:
+            print ("\n")
+            print ("!!!Demo terminated, "
+                   "failed to build object for NETCONF device '%s', "
+                   "reason: %s" % (node_id, status.brief()))
+            exit(0)
+    
+    
+    for node in netconf_nodes:
+        time.sleep(rundelay)
+        print "\n".strip()
+        print "<<< Information for '{}' device".format(node_id)
+        print "\n".strip()
+        print "         Device Name       : {}".format(node.get_id())
+        print "         Connection status : {}".format(node.get_conn_status())
+        print "\n".strip()
+        print "         Initial Capabilities"
+        print "         {}".format('-'*60)
+        clist = node.get_initial_capabilities()
+        for item in clist:
+            print "         {}".format(item)
     
     
     print ("\n")

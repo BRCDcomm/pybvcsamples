@@ -15,10 +15,12 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
 ## BVC Version Support:
 * 1.1.1 folder has been tested with BVC 1.1.1
 * 1.2.0 folder has been tested with BVC 1.2.0
-* 1.3.0 folder is being tested with BVC 1.3.0 and pybvc 1.1.1
+* 1.3.0 folder is being tested with BVC 1.3.0 and pybvc 1.2.0
 
 ## Sample Apps
 
+* 1.3.0/sampleopenflow/apps/
+    * _oftool/oftool_*: A command line tool for obtaining topology, inventory info as well as flow info.  Also provides ability to delete flows.
 * 1.3.0/sampleopenflow/demos/
     * _demo1_: Get list of OpenFlow nodes and provide generic info for each.
     * _demo2_: Get detailed info about node with specific name (default node name is openflow:1).
@@ -43,6 +45,10 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
     * _demo21_: Add/remove flow to openflow:1 node that Match: Ethernet Type 0x86dd, IPv6 Source 1234:5678:9ABC:DEF0:FDCD:A987:6543:210F/76, IPv6 Destination 2000:2abc:edff:fe00::3456/94, IPv6 Flow Label 7, IP DSCP 60, IP ECN 3, TCP Source 1831, TCP Destination 100610, Metadata: 123456789 Action: Output (controller)
     * _demo23_: Add/remove flow to openflow:1 node that Match: Ethernet Type 0x8847, MPLS Label 0x1b In port 13 Action: Set Field (MPLS Label 44, Output (Physical Port Number 14)
     * _demo24_: Add/remove flow to openflow:1 node that Match: Ethernet Type 0x8847, MPLS Label 0x2c In port 14 Action: Pop MPLS (Ethernet Type 34887, Output (Physical Port Number 13)
+    * _demo25_: Add/retrieve/remove four flow entries to controller
+    * _demo26_: Add/retrieve/remove seven flow entries to controller, display using compressed oxm format (similar to open vswitch).
+    * _demo27_: Retrieve and display topology information about network seen by controller.
+    * _demo28_: Retrieve and display inventory information about network seen by controller.
 * 1.3.0/samplenetconf/demos
     * _ctrl_demo1_: List of YANG models supported by the Controller.
     * _ctrl_demo2_: Retrieve specific YANG model definition from the Controller.
@@ -55,6 +61,8 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
     * _ctrl_demo9_: Show notification event streams registered on the Controller.
     * _ctrl_demo10_: Add/remove a NETCONF node to the controller.
     * _ctrl_demo11_: Another example of Add/remove a NETCONF node to the controller.
+    * _ctrl_demo12_: Retrieve and display the configured NETCONF nodes.
+    * _ctrl_demo13_: Retrieve and display the connection status of NETCONF nodes to the controller.
     * _vr_demo1_: Get supported models of vRouter connected to Controller.
     * _vr_demo2_: Get definition of specific model of vRouter connected.
     * _vr_demo3_: Get vRouter configuration.
