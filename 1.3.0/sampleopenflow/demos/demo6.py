@@ -33,15 +33,15 @@ import time
 import json
 
 
-from pybvc.controller.controller import Controller
-from pybvc.openflowdev.ofswitch import OFSwitch
-from pybvc.openflowdev.ofswitch import FlowEntry
-from pybvc.openflowdev.ofswitch import Instruction
-from pybvc.openflowdev.ofswitch import DropAction
-from pybvc.openflowdev.ofswitch import Match
+from framework.controller.controller import Controller
+from framework.openflowdev.ofswitch import OFSwitch
+from framework.openflowdev.ofswitch import FlowEntry
+from framework.openflowdev.ofswitch import Instruction
+from framework.openflowdev.ofswitch import DropAction
+from framework.openflowdev.ofswitch import Match
 
-from pybvc.common.status import STATUS
-from pybvc.common.utils import load_dict_from_file
+from framework.common.status import STATUS
+from framework.common.utils import load_dict_from_file
 
 if __name__ == "__main__":
     
@@ -100,7 +100,7 @@ if __name__ == "__main__":
     # --- Instruction: 'Apply-actions'
     #     Action:      'Drop'
     instruction = Instruction(instruction_order = 0)
-    action = DropAction(action_order = 0)
+    action = DropAction(order = 0)
     instruction.add_apply_action(action)
     flow_entry.add_instruction(instruction)
     

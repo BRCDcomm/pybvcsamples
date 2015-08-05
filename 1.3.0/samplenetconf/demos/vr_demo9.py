@@ -32,11 +32,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import time
 import json
 
-from pybvc.controller.controller import Controller
-from pybvc.netconfdev.vrouter.vrouter5600 import VRouter5600
-from pybvc.netconfdev.vrouter.vpn import Vpn
-from pybvc.common.status import STATUS
-from pybvc.common.utils import load_dict_from_file
+from framework.controller.controller import Controller
+from framework.netconfdev.vrouter.vrouter5600 import VRouter5600
+from framework.netconfdev.vrouter.vpn import Vpn
+from framework.common.status import STATUS
+from framework.common.utils import load_dict_from_file
 
 if __name__ == "__main__":
     
@@ -235,6 +235,7 @@ if __name__ == "__main__":
     vpn.set_l2tp_remote_access_user(name=uname1, pswd=upswd1)
     vpn.set_l2tp_remote_access_user(name=uname2, pswd=upswd2)
     vpn.set_l2tp_remote_access_user(name=uname3, pswd=upswd3)
+    
     
     print "\n"
     print (">>> VPN configuration to be applied to the '%s'" % (nodeName))

@@ -32,10 +32,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import time
 import json
 
-from pybvc.controller.controller import Controller
-from pybvc.netconfdev.vrouter.vrouter5600 import VRouter5600
-from pybvc.common.status import STATUS
-from pybvc.common.utils import load_dict_from_file
+from framework.controller.controller import Controller
+from framework.netconfdev.vrouter.vrouter5600 import VRouter5600
+from framework.common.status import STATUS
+from framework.common.utils import load_dict_from_file
 
 
 if __name__ == "__main__":
@@ -164,7 +164,7 @@ if __name__ == "__main__":
     
     print "\n"
     print (">>> Remove '%s' NETCONF node from the Controller" % nodeName)
-    time.sleep(rundelay)    
+    time.sleep(rundelay)
     result = ctrl.delete_netconf_node(vrouter)
     status = result.get_status()
     if(status.eq(STATUS.OK)):

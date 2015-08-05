@@ -32,12 +32,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import time
 
 
-from pybvc.controller.controller import Controller
-from pybvc.controller.inventory import Inventory
-from pybvc.controller.topology import Topology, Node
+from framework.controller.controller import Controller
+from framework.controller.inventory import Inventory
+from framework.controller.topology import Topology, Node
 
-from pybvc.common.status import STATUS
-from pybvc.common.utils import load_dict_from_file
+from framework.common.status import STATUS
+from framework.common.utils import load_dict_from_file
 
 if __name__ == "__main__":
     

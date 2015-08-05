@@ -3,9 +3,9 @@
 import sys
 import getopt
 
-from pybvc.controller.controller import Controller
-from pybvc.common.status import STATUS
-from pybvc.common.utils import load_dict_from_file
+from framework.controller.controller import Controller
+from framework.common.status import STATUS
+from framework.common.utils import load_dict_from_file
 
 
 def usage(myname):

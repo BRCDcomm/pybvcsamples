@@ -32,10 +32,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import time
 import os
 
-from pybvc.controller.controller import Controller
-from pybvc.common.status import STATUS
-from pybvc.controller.netconfnode import NetconfNode
-from pybvc.common.utils import load_dict_from_file
+from framework.controller.controller import Controller
+from framework.common.status import STATUS
+from framework.controller.netconfnode import NetconfNode
+from framework.common.utils import load_dict_from_file
 
 
 if __name__ == "__main__":
