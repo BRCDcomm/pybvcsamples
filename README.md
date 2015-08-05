@@ -49,6 +49,9 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
     * _demo26_: Add/retrieve/remove seven flow entries to controller, display using compressed oxm format (similar to open vswitch).
     * _demo27_: Retrieve and display topology information about network seen by controller.
     * _demo28_: Retrieve and display inventory information about network seen by controller.
+    * _demo29_: Notification service example.  Subscribes to controller and receives notifications of any changes to topology and outputs those changes to the screen.  You will need to connect some switches to your controller or
+use mininet.
+    * _demo30_: Another notifcation service example.  Same as demo29, but it is for changes to inventory instead of topology. 
 * 1.3.0/samplenetconf/demos
     * _ctrl_demo1_: List of YANG models supported by the Controller.
     * _ctrl_demo2_: Retrieve specific YANG model definition from the Controller.
