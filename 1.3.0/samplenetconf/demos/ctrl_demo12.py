@@ -32,9 +32,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import time
 
 
-from framework.controller.controller import Controller
-from framework.common.status import STATUS
-from framework.controller.inventory import NetconfConfigModule
+from pybvc.controller.controller import Controller
+from pybvc.common.status import STATUS
+from pybvc.controller.inventory import NetconfConfigModule
 
 
 if __name__ == "__main__":

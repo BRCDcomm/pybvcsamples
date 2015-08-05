@@ -33,10 +33,10 @@ import time
 import json
 
 
-from framework.controller.controller import Controller
-from framework.openflowdev.ofswitch import OFSwitch
-from framework.common.status import STATUS
-from framework.common.utils import load_dict_from_file
+from pybvc.controller.controller import Controller
+from pybvc.openflowdev.ofswitch import OFSwitch
+from pybvc.common.status import STATUS
+from pybvc.common.utils import load_dict_from_file
 
 
 if __name__ == "__main__":

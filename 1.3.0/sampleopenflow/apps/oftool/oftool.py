@@ -34,12 +34,12 @@ import yaml
 import argparse
 
 from collections import OrderedDict
-from framework.controller.controller import Controller
-from framework.common.status import STATUS
-from framework.common.utils import dbg_print
-from framework.openflowdev.ofswitch import OFSwitch, FlowEntry
-from framework.controller.topology import Topology, Node
-from framework.controller.inventory import Inventory, \
+from pybvc.controller.controller import Controller
+from pybvc.common.status import STATUS
+from pybvc.common.utils import dbg_print
+from pybvc.openflowdev.ofswitch import OFSwitch, FlowEntry
+from pybvc.controller.topology import Topology, Node
+from pybvc.controller.inventory import Inventory, \
                                            OpenFlowCapableNode, \
                                            OpenFlowPort
 
