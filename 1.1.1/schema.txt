@@ -1528,7 +1528,7 @@ module protocol-framework {
 
     description
         "This module contains the base YANG definitions for
-         protocol framework.
+         protocol pybvc.
 
         Copyright (c)2013 Cisco Systems, Inc. All rights reserved.;
 
@@ -1553,7 +1553,7 @@ module protocol-framework {
             "Service representing a reconnect strategy factory.";
 
         base "config:service-type";
-        config:java-class "org.opendaylight.protocol.framework.ReconnectStrategyFactory";
+        config:java-class "org.opendaylight.protocol.pybvc.ReconnectStrategyFactory";
     }
 
     identity never-reconnect-strategy-factory {
@@ -1682,7 +1682,7 @@ module protocol-framework {
 
     description
         "This module contains the base YANG definitions for
-         protocol framework.
+         protocol pybvc.
 
         Copyright (c)2013 Cisco Systems, Inc. All rights reserved.;
 
@@ -1707,7 +1707,7 @@ module protocol-framework {
             "Service representing a reconnect strategy factory.";
 
         base "config:service-type";
-        config:java-class "org.opendaylight.protocol.framework.ReconnectStrategyFactory";
+        config:java-class "org.opendaylight.protocol.pybvc.ReconnectStrategyFactory";
     }
 
     identity never-reconnect-strategy-factory {
@@ -39456,7 +39456,7 @@ module protocol-framework {
 
     description
         "This module contains the base YANG definitions for
-         protocol framework.
+         protocol pybvc.
 
         Copyright (c)2013 Cisco Systems, Inc. All rights reserved.;
 
@@ -39481,7 +39481,7 @@ module protocol-framework {
             "Service representing a reconnect strategy factory.";
 
         base "config:service-type";
-        config:java-class "org.opendaylight.protocol.framework.ReconnectStrategyFactory";
+        config:java-class "org.opendaylight.protocol.pybvc.ReconnectStrategyFactory";
     }
 
     identity never-reconnect-strategy-factory {
@@ -39610,7 +39610,7 @@ module protocol-framework {
 
     description
         "This module contains the base YANG definitions for
-         protocol framework.
+         protocol pybvc.
 
         Copyright (c)2013 Cisco Systems, Inc. All rights reserved.;
 
@@ -39635,7 +39635,7 @@ module protocol-framework {
             "Service representing a reconnect strategy factory.";
 
         base "config:service-type";
-        config:java-class "org.opendaylight.protocol.framework.ReconnectStrategyFactory";
+        config:java-class "org.opendaylight.protocol.pybvc.ReconnectStrategyFactory";
     }
 
     identity never-reconnect-strategy-factory {

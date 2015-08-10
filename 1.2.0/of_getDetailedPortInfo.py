@@ -39,7 +39,7 @@ import json
 
 
 from pybvc.controller.controller import Controller
-#from framework.controller.openflownode import OpenflowNode
+#from pybvc.controller.openflownode import OpenflowNode
 from pybvc.openflowdev.ofswitch import OFSwitch
 from pybvc.common.status import STATUS
 from pybvc.common.utils import load_dict_from_file
