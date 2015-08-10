@@ -15,7 +15,7 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
 ## BVC Version Support:
 * 1.1.1 folder has been tested with BVC 1.1.1
 * 1.2.0 folder has been tested with BVC 1.2.0
-* 1.3.0 folder is being tested with BVC 1.3.0 and pybvc 1.3.0
+* 1.3.0 folder is being tested with BVC 1.3.0 and pybvc 1.3.1
 
 ## Sample Apps
 
@@ -52,6 +52,7 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
     * _demo29_: Notification service example.  Subscribes to controller and receives notifications of any changes to topology and outputs those changes to the screen.  You will need to connect some switches to your controller or
 use mininet.
     * _demo30_: Another notifcation service example.  Same as demo29, but it is for changes to inventory instead of topology. 
+    * _demo31_: Add/remove flow to openflow:1 node that Match: In port 10, Ethernet Type 0x800, IPv4 dest addr 10.1.2.3/32 Action: Set IPv4 ToS (tos 8), Output (Physical Port Number 15)
 * 1.3.0/samplenetconf/demos
     * _ctrl_demo1_: List of YANG models supported by the Controller.
     * _ctrl_demo2_: Retrieve specific YANG model definition from the Controller.
