@@ -15,7 +15,7 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
 ## BVC Version Support:
 * 1.1.1 folder has been tested with BVC 1.1.1
 * 1.2.0 folder has been tested with BVC 1.2.0
-* 1.3.0 folder is being tested with BVC 1.3.0 and pybvc 1.3.1
+* 1.3.0 folder is being tested with BVC 1.3.0 and pybvc 1.3.2
 
 ## Sample Apps
 
@@ -53,6 +53,11 @@ git clone https://github.com/BRCDcomm/pybvcsamples.git
 use mininet.
     * _demo30_: Another notifcation service example.  Same as demo29, but it is for changes to inventory instead of topology. 
     * _demo31_: Add/remove flow to openflow:1 node that Match: In port 10, Ethernet Type 0x800, IPv4 dest addr 10.1.2.3/32 Action: Set IPv4 ToS (tos 8), Output (Physical Port Number 15)
+    * _demo32_: For each openflow capable switch it lists the group table support.  The switch must support OpenFlow's GroupTable to work otherwise the demo will exit with an error.  Mininet 2.2.0 does not support GroupTable.
+    * _demo33_: Creates/Removes an example of multicast/broadcast group table.  The switch must support OpenFlow's GroupTable to work otherwise the demo will show that the group table is not in the operational table (but is in config table).  Mininet 2.2.0 does not support GroupTable.
+    * _demo34_: Creates/Removes an example of load balancing group table.  The switch must support OpenFlow's GroupTable to work otherwise the demo will show that the group table is not in the operational table (but is in config table).  Mininet 2.2.0 does not support GroupTable.
+    * _demo35_: Creates/Removes an example of 'set of common actions' group table.  The switch must support OpenFlow's GroupTable to work otherwise the demo will show that the group table is not in the operational table (but is in config table).  Mininet 2.2.0 does not support GroupTable.
+    * _demo36_: Creates/Removes an example of 'link fast failover' group table.  The switch must support OpenFlow's GroupTable to work otherwise the demo will show that the group table is not in the operational table (but is in config table).  Mininet 2.2.0 does not support GroupTable.
 * 1.3.0/samplenetconf/demos
     * _ctrl_demo1_: List of YANG models supported by the Controller.
     * _ctrl_demo2_: Retrieve specific YANG model definition from the Controller.
