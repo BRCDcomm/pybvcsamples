@@ -1,5 +1,0 @@
-# Controller specification
-ctrlIpAddr: "192.168.56.101"
-ctrlPortNum: "8181"     
-ctrlUname: 'admin' 
-ctrlPswd:  'admin'   
